@@ -1,0 +1,8 @@
+FROM --platform=linux/amd64 lscr.io/linuxserver/webtop:latest
+# Install nano text editor
+RUN sudo apk add --no-cache nano
+ENV TZ=NewZealand/Auckland
+VOLUME /mnt/efs /config
+EXPOSE 3000
+ENV SHM_SIZE="2gb"
+
